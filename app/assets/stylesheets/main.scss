@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+html,
+body{
+  height: 100%;
+}
+
 // Typography
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -55,5 +60,30 @@ nav {
       border-bottom: 1px solid white;
       color: white;
     }
+  }
+}
+
+// Search form
+header>form {
+  margin-top: 7vw;
+  margin-left: 25.8vw;
+  input.text {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-weight: lighter;
+    width: 205px;
+  }
+  input.button {
+    border-radius: 27.5px;
+    border: 1px solid white;
+    background: none;
+    color: white;
+    font-size: 18px;
+    padding: 1px 18px;
+  }
+  input {
+    margin-right: 5px;
   }
 }
