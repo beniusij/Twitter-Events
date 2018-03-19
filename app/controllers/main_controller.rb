@@ -7,8 +7,7 @@ class MainController < ApplicationController
   end
 
   def search
-    #@events = Event.search(params[:search])
-    #redirect_to search_path
+    @results = Event.search(params)
   end
 
   private

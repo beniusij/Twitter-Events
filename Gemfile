@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
+# Use Geokit for automatic determination of visitor's location
+gem 'geokit-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
