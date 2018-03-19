@@ -1,3 +1,45 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Header
+header {
+  height: 26vw;
+  border: none;
+  margin: 0;
+  background: asset-url("header_main.jpeg") no-repeat center center;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover !important;
+  -o-background-size: cover;
+}
+
+// Navigation bar
+nav {
+  width: 400px;
+  a {
+    color: white;
+    font-size: 29px;
+    img {
+      width: 84.6px;
+      height: 77px;
+      border-radius: 100%;
+      float: left;
+      margin-top: 8px;
+    }
+    p#brand-name {
+      font-size: 32px;
+      margin: 0;
+      border-right: solid 1px white;
+      padding-right: 110px;
+    }
+  }
+  ul {
+    display: inline-block;
+    list-style: none;
+    li {
+
+    }
+  }
+}
