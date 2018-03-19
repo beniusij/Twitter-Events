@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Typography
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+}
+
 // Header
 header {
   height: 26vw;
@@ -17,29 +23,37 @@ header {
 
 // Navigation bar
 nav {
-  width: 400px;
+  position: relative;
+  top: -27vw;
+  left: -2vw;
   a {
     color: white;
-    font-size: 29px;
+    font-size: 1.3vw;
     img {
-      width: 84.6px;
-      height: 77px;
+      width: 4.405vw;
+      height: 4vw;
       border-radius: 100%;
       float: left;
-      margin-top: 8px;
+      margin-top: 0.5vw;
     }
     p#brand-name {
-      font-size: 32px;
+      font-size: 1.65vw;
+      font-weight: bold;
       margin: 0;
       border-right: solid 1px white;
-      padding-right: 110px;
+      padding-right: 5vw;
+    }
+    &:hover {
+      color: white;
     }
   }
-  ul {
-    display: inline-block;
-    list-style: none;
-    li {
-
+  a.nav-link {
+    margin-top: 1.2vw;
+    font-weight: lighter;
+    height: 2.7vw;
+    &:hover {
+      border-bottom: 1px solid white;
+      color: white;
     }
   }
 }
