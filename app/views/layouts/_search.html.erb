@@ -1,6 +1,0 @@
-<%= form_for search_path, method: "get", class: "form-inline" do %>
-    <%= text_field_tag :keywords, params[:search],
-                       placeholder: "Keywords or location", class: "text"  %>
-    <%= date_field_tag :date,     params[:search], class: "text" %>
-    <%= submit_tag "Search", class: "button" %>
-<% end %>

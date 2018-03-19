@@ -7,6 +7,12 @@ class MainController < ApplicationController
   end
 
   def search
-    @events = Event.search(params[:search])
+    #@events = Event.search(params[:search])
+    #redirect_to search_path
+  end
+
+  private
+  def search_params
+    params.require(:event).permit(:keywords, :date)
   end
 end

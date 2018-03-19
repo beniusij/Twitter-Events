@@ -1,22 +1,22 @@
 <div class="container">
-  <div class="col-md-6 offset-md-2 local-events">
+  <div class="col-md-6 offset-md-3 local-events">
     <h1>Events in Birmingham</h1>
     <% @local_events.each do |e| %>
-        <div class="row event">
-          <p><%= e.date %></p>
-          <p><%= e.place %></p>
-          <p><%= e.keywords %></p>
+        <div class="container event">
+          <p class="date"><%= e.date %></p>
+          <p class="place"><%= e.place %></p>
+          <p class="keywords"><%= e.keywords %></p>
         </div>
     <% end %>
   </div>
 
-  <div class="col-md-6 offset-md-2 other-events">
+  <div class="col-md-6 offset-md-3 other-events">
     <h1>Other Events Globally</h1>
     <% @other_events.each do |e| %>
         <div class="row event">
-          <p><%= e.date %></p>
-          <p><%= e.place %></p>
-          <p><%= e.keywords %></p>
+          <p class="date"><%= e.date %></p>
+          <p class="place"><%= e.place %></p>
+          <p class="keywords"><%= e.keywords %></p>
         </div>
     <% end %>
   </div>

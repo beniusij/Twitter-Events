@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="col-md-6 offset-md-3 local-events">
+    <h1>Results</h1>
+    <% if @results.nil? %>
+      <p>No results.</p>
+    <% else %>
+      <% @results.each do |e| %>
+          <div class="container event">
+            <p class="date"><%= e.date %></p>
+            <p class="place"><%= e.place %></p>
+            <p class="keywords"><%= e.keywords %></p>
+          </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
