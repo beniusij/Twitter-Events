@@ -3,7 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 html, body{
-  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 // Typography
@@ -16,6 +19,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 header {
   height: 26vw;
   border: none;
+  border-radius: 0 !important;
   margin: 0;
   background: asset-url("header_main.jpeg") no-repeat center center;
 
