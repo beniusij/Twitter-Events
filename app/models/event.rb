@@ -14,4 +14,14 @@ class Event < ApplicationRecord
             "%" + keywords + "%").order(date: :asc)
     end
   end
+
+  def self.local_events(city)
+    where('place LIKE ? OR keywords LIKE ?', '%' + city + '%',
+          '%' + city + '%').order(date: :asc)
+  end
+
+  def self.other_events(city)
+    where("place NOT LIKE ? OR keywords NOT LIKE ?", "%" + city + "%",
+          '%' + city + '%').order(date: :asc)
+  end
 end
