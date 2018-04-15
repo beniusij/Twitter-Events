@@ -69,7 +69,7 @@ nav {
 // Search form
 header>form {
   margin-top: 7vw;
-  margin-left: 25.8vw;
+  margin-left: 27.6vw;
   input.text {
     background: none;
     border: none;
@@ -111,6 +111,22 @@ div.event {
   text-align: right;
   color: #6A7DA3;
   font-size: 1.4rem;
+}
+
+// Pagination nav
+ul.pagination {
+  margin-bottom: 3vw;
+  li {
+    margin: 0 0.4vw;
+    a {
+      color: #323234;
+    }
+  }
+  li.active {
+    a {
+      color: #dc5437;
+    }
+  }
 }
 
 // Footer

@@ -1,12 +1,12 @@
 class MainController < ApplicationController
   def home
     @city = Geokit::Geocoders::MultiGeocoder.geocode(remote_ip).city
-    @local_events = Event.local_events(@city)
-    @other_events = Event.other_events(@city)
+    @local_events = Event.local_events(@city).paginate(page: params[:page], per_page: 10)
+    @other_events = Event.other_events(@city).paginate(page: params[:page], per_page: 10)
   end
 
   def search
-    @results = Event.search(params)
+    @results = Event.search(params).paginate(page: params[:page], per_page: 10)
   end
 
   def remote_ip

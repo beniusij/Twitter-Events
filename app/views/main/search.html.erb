@@ -5,12 +5,14 @@
       <p>No results.</p>
     <% else %>
       <% @results.each do |e| %>
-          <div class="container event">
-            <p class="date"><%= e.date %></p>
-            <p class="place"><%= e.place %></p>
-            <p class="keywords"><%= e.keywords %></p>
-          </div>
+        <div class="container event">
+          <p class="date"><%= e.date %></p>
+          <p class="place"><%= e.place %></p>
+          <p class="keywords"><%= e.keywords %></p>
+        </div>
       <% end %>
+
+      <%= will_paginate @results %>
     <% end %>
   </div>
 </div>
