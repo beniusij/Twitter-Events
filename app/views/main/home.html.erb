@@ -3,9 +3,15 @@
     <h1>Events in Birmingham</h1>
     <% @local_events.each do |e| %>
         <div class="container event">
-          <p class="date"><%= e.date %></p>
-          <p class="place"><%= e.place %></p>
-          <p class="keywords"><%= e.keywords %></p>
+          <div class="row">
+            <div class="col-12">
+              <p class="date"><%= e.date %></p>
+              <p class="place float-right"><%= e.place %></p>
+            </div>
+          </div>
+          <div class="row">
+            <p class="keywords"><%= e.keywords %></p>
+          </div>
         </div>
     <% end %>
 
@@ -16,9 +22,15 @@
     <h1>Other Events Globally</h1>
     <% @other_events.each do |e| %>
         <div class="container event">
-          <p class="date"><%= e.date %></p>
-          <p class="place"><%= e.place %></p>
-          <p class="keywords"><%= e.keywords %></p>
+          <div class="row">
+            <div class="col-12">
+              <p class="date"><%= e.date %></p>
+              <p class="place float-right"><%= e.place %></p>
+            </div>
+          </div>
+          <div class="row">
+            <p class="keywords"><%= e.keywords %></p>
+          </div>
         </div>
     <% end %>
     <%= will_paginate @other_events %>

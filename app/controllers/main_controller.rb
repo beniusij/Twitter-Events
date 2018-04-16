@@ -7,6 +7,7 @@ class MainController < ApplicationController
 
   def search
     @results = Event.search(params).paginate(page: params[:page], per_page: 10)
+    puts @results
   end
 
   def remote_ip
