@@ -68,8 +68,8 @@ nav {
 
 // Search form
 header>form {
-  margin-top: 7vw;
-  margin-left: 27.6vw;
+  position: relative;
+  top: 8vw;
   input.text {
     background: none;
     border: none;
