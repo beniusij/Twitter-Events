@@ -2,13 +2,14 @@ class Event < ApplicationRecord
   validates :date, :keywords, presence: true
 
   def self.search(search)
-    date = search[:date]
+    date = search[:date].split(' - ')
+    puts date
     keywords = search[:keywords]
     if !date.empty? && !keywords.empty?
-      where("(keywords LIKE ? OR place LIKE ?) " + "AND date = ?",
-            "%" + keywords + "%", "%" + keywords + "%", date).order(date: :asc)
+      where("(keywords LIKE ? OR place LIKE ?) AND date BETWEEN ? AND ?",
+            "%" + keywords + "%", "%" + keywords + "%", date[0], date[1]).order(date: :asc)
     elsif !date.empty?
-      where("date = ?", date).order(place: :asc)
+      where("date BETWEEN ? AND ?", date[0], date[1]).order(place: :asc)
     elsif !keywords.empty?
       where("keywords LIKE ? OR place LIKE ?", "%" + keywords + "%",
             "%" + keywords + "%").order(date: :asc)

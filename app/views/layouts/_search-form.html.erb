@@ -3,8 +3,29 @@
     <%= text_field_tag :keywords, params[:keywords],
                        placeholder: "Keywords or location", class: "text",
     id: "keywords", onchange: 'validateFields()' %>
-    <%= date_field_tag :date, params[:date], class: "text", id: "date",
-                       onchange: 'validateFields()' %>
+    <%= text_field_tag :date, params[:date], class: "text", id: "date",
+                       onchange: 'validateFields()', placeholder: "Date" %>
     <%= submit_tag "Search", name: nil, class: "button", id: "submit",
                    disabled: true %>
 <% end %>
+<script type="text/javascript">
+    $(function() {
+        $('input[name="date"]').daterangepicker({
+            autoUpdateInput: false,
+            locale: {
+                cancelLabel: 'Clear',
+                format: 'YYYY/MM/DD'
+            }
+        });
+
+        $('input[name="date"]').on('apply.daterangepicker', function(ev, picker) {
+            $(this).val(picker.startDate.format('YYYY/MM/DD') + ' - ' + picker.endDate.format('YYYY/MM/DD'));
+            $('#submit').prop('disabled', false);
+        });
+
+        $('input[name="date"]').on('cancel.daterangepicker', function(ev, picker) {
+            $(this).val('');
+            $('#submit').prop('disabled', true);
+        });
+    });
+</script>
