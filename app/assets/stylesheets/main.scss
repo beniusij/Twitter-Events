@@ -89,6 +89,10 @@ header>form {
   input {
     margin-right: 5px;
   }
+  .button:hover:enabled {
+    background-color: white;
+    color: #2e2e30;
+  }
 }
 
 // Event lists
