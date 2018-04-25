@@ -1,6 +1,6 @@
 <div class="container">
   <div class="col-md-6 offset-md-3 local-events">
-    <h1>Events in Birmingham</h1>
+    <h1>Events in <%= @city.html_safe %></h1>
     <% @local_events.each do |e| %>
         <div class="container event">
           <div class="row">
@@ -11,6 +11,7 @@
           </div>
           <div class="row">
             <p class="keywords"><%= e.keywords %></p>
+            <p>Posted by: @<%= e.username %></p>
           </div>
         </div>
     <% end %>
@@ -30,6 +31,7 @@
           </div>
           <div class="row">
             <p class="keywords"><%= e.keywords %></p>
+            <p>Posted by: @<%= e.username %></p>
           </div>
         </div>
     <% end %>
